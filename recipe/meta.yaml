@@ -1,5 +1,5 @@
 {% set name = "sbpy" %}
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,27 +7,29 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 07fe29c0c46af723043f78aa00914cffba1dceb01b90bc6f934810f982a8e76f
-  patches:
-    - setup.cfg.patch
+  sha256: 6da03f502b971510275bc7306995e1142403ede5d3ec7b72d3bd6e21f807f424
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.7
+    - setuptools_scm
     - pip
   run:
-    - python
-    - numpy >=1.13.0
-    - astropy >=3.0
-    - matplotlib-base
-    - ads
-    - synphot
-    - astroquery >=0.4.1
+    - python >=3.7
+    - numpy >=1.17.0
+    - astropy >=4.0
+    - ads >=0.12
+    - synphot >=1.0
+    - astroquery >=0.4.5
+    - scipy
+    - photutils
+    - pyyaml
+    - ginga
 
 test:
   imports:
@@ -41,7 +43,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
-  summary: 'sbpy is a Python package for small-body planetary astronomy.'
+  summary: sbpy is a Python package for small-body planetary astronomy.
   description: |
     sbpy is a community effort to build a Python package for small-body
     planetary astronomy in the form of an Astropy affiliated package. The

@@ -18,16 +18,20 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.7
+    - setuptools_scm
     - pip
   run:
-    - python
-    - numpy >=1.13.0
-    - astropy >=3.0
-    - matplotlib-base
-    - ads
-    - synphot
-    - astroquery >=0.4.1
+    - python >=3.7
+    - numpy >=1.17.0
+    - astropy >=4.0
+    - ads >=0.12
+    - synphot >=1.0
+    - astroquery >=0.4.5
+    - scipy
+    - photutils
+    - pyyaml
+    - ginga
 
 test:
   imports:

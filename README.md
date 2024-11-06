@@ -1,11 +1,11 @@
-About sbpy
-==========
+About sbpy-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sbpy-feedstock/blob/main/LICENSE.txt)
 
 Home: https://sbpy.org/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sbpy-feedstock/blob/main/LICENSE.txt)
 
 Summary: sbpy is a Python package for small-body planetary astronomy.
 

@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.7
     - numpy >=1.17.0
-    - astropy >=4.0
+    - astropy-base >=4.0
     - ads >=0.12
     - synphot >=1.0
     - astroquery >=0.4.5
